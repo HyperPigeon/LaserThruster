@@ -1,0 +1,194 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://pokemon-frlg.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://tileset_void.png" type="Texture" id=2]
+[ext_resource path="res://settings_ticker.png" type="Texture" id=3]
+[ext_resource path="res://slider.png" type="Texture" id=4]
+[ext_resource path="res://exit_icon_pressed.png" type="Texture" id=5]
+[ext_resource path="res://exit_icon.png" type="Texture" id=6]
+[ext_resource path="res://scenes/menu/Settings.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_color = Color( 0, 0.87451, 0.921569, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0.87451, 0.921569, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 8 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_color = Color( 0, 0.87451, 0.921569, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 8 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 8 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 8 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 8 )
+
+[node name="Settings" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -19.0
+margin_top = -13.0
+margin_right = 696.0
+margin_bottom = 379.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 222.0
+margin_right = 439.0
+margin_bottom = 70.0
+custom_colors/default_color = Color( 0, 0.87451, 0.921569, 1 )
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Settings"
+text = "Settings"
+
+[node name="AsteroidDestroyedVolume" type="RichTextLabel" parent="."]
+margin_left = 17.0
+margin_top = 57.0
+margin_right = 365.0
+margin_bottom = 97.0
+custom_colors/default_color = Color( 0, 0.87451, 0.921569, 1 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "Asteroid Destroyed Volume"
+
+[node name="AsteroidSoundSlider" type="HSlider" parent="."]
+margin_left = 17.0
+margin_top = 72.0
+margin_right = 365.0
+margin_bottom = 110.0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 8 )
+min_value = -60.0
+max_value = 10.0
+
+[node name="EnemyDestroyedSoundVolume" type="RichTextLabel" parent="."]
+margin_left = 17.0
+margin_top = 110.0
+margin_right = 374.0
+margin_bottom = 134.0
+custom_colors/default_color = Color( 0, 0.87451, 0.921569, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Enemy Destroyed Volume"
+
+[node name="EnemySoundSlider" type="HSlider" parent="."]
+margin_left = 17.0
+margin_top = 134.0
+margin_right = 365.0
+margin_bottom = 158.0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 9 )
+min_value = -60.0
+max_value = 10.0
+
+[node name="PlayerDestroyedVolume" type="RichTextLabel" parent="."]
+margin_left = 17.0
+margin_top = 158.0
+margin_right = 336.0
+margin_bottom = 186.0
+custom_colors/default_color = Color( 0, 0.87451, 0.921569, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 5 )
+text = "Player Destroyed Volume"
+
+[node name="PlayerDestroyedSlider" type="HSlider" parent="."]
+margin_left = 17.0
+margin_top = 186.0
+margin_right = 365.0
+margin_bottom = 202.0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 10 )
+min_value = -60.0
+max_value = 10.0
+
+[node name="LaserVolume" type="RichTextLabel" parent="."]
+margin_left = 17.0
+margin_top = 209.0
+margin_right = 247.0
+margin_bottom = 249.0
+custom_colors/default_color = Color( 0, 0.87451, 0.921569, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+text = "Laser Volume"
+
+[node name="LaserVolumeSlider" type="HSlider" parent="."]
+margin_left = 17.0
+margin_top = 239.0
+margin_right = 365.0
+margin_bottom = 255.0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 11 )
+min_value = -60.0
+max_value = 10.0
+
+[node name="PlayerHurt" type="RichTextLabel" parent="."]
+margin_left = 17.0
+margin_top = 266.0
+margin_right = 443.0
+margin_bottom = 306.0
+custom_colors/default_color = Color( 0, 0.87451, 0.921569, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+text = "Player Hurt Volume"
+
+[node name="PlayerHurtVolumeSlider" type="HSlider" parent="."]
+margin_left = 17.0
+margin_top = 293.0
+margin_right = 365.0
+margin_bottom = 318.0
+custom_icons/grabber_highlight = ExtResource( 3 )
+custom_icons/grabber = ExtResource( 3 )
+custom_styles/slider = SubResource( 12 )
+min_value = -60.0
+max_value = 15.0
+
+[node name="ExitButton" type="TextureButton" parent="."]
+margin_left = 585.0
+margin_top = 9.0
+margin_right = 905.0
+margin_bottom = 329.0
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+
+[connection signal="drag_ended" from="AsteroidSoundSlider" to="." method="_on_AsteroidSoundSlider_drag_ended"]
+[connection signal="drag_ended" from="EnemySoundSlider" to="." method="_on_EnemySoundSlider_drag_ended"]
+[connection signal="drag_ended" from="PlayerDestroyedSlider" to="." method="_on_PlayerDestroyedSlider_drag_ended"]
+[connection signal="drag_ended" from="LaserVolumeSlider" to="." method="_on_LaserVolumeSlider_drag_ended"]
+[connection signal="drag_ended" from="PlayerHurtVolumeSlider" to="." method="_on_PlayerHurtVolumeSlider_drag_ended"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://hit_sound.mp3" type="AudioStream" id=1]
+[ext_resource path="res://player_death_sound.mp3" type="AudioStream" id=2]
+[ext_resource path="res://enemy_ship_destroyed.mp3" type="AudioStream" id=3]
+[ext_resource path="res://laser_shoot.mp3" type="AudioStream" id=4]
+[ext_resource path="res://player_hit_sound.mp3" type="AudioStream" id=5]
+
+[node name="SoundManager" type="Node2D"]
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="EnemyDeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
