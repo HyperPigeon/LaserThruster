@@ -1,2 +1,2 @@
-# LaserThruster
-A simple asteroids-esque game using Godot where you can only move by shooting. 
+# Laser Thruster
+A simple asteroid-esque game using Godot where you can only move by shooting. 
